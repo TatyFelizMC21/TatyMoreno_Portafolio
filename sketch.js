@@ -1,7 +1,10 @@
-function setup() {
-  createCanvas(400, 400);
-}
+document.addEventListener("DOMContentLoaded", () => {
+  const loadingScreen = document.getElementById("loading-screen");
+  const mainContent = document.getElementById("main-content");
 
-function draw() {
-  background(220);
-}
+  // Simula el tiempo de carga
+  setTimeout(() => {
+    loadingScreen.style.display = "none";
+    mainContent.classList.remove("hidden");
+  }, 3000);
+});
